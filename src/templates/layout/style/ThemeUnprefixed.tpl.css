@@ -1,0 +1,230 @@
+/*
+ * Copyright 2013 Amadeus s.a.s.
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+ 
+/* STYLES COVERED IN THIS FILE:
+ * * style
+ * HTML elements:
+ *     - Body
+ *     - A
+ *     - Input
+ *     - Textarea
+ *     - Select
+ *     - H1
+ *     - H2
+ * Animations:
+ *     - Invisible
+ *     - fadefast
+  */
+ 
+ 
+{CSSTemplate {
+    $classpath: "templates.layout.style.ThemeUnprefixed",
+    $prefix : false
+}}
+
+{macro main()}
+
+* {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: moz-none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+body {
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+    font-size: 15px;
+    font-family: arial, helvetica;
+    text-align: center;
+    background: ${templates.layout.style.Flat.Body.bg};
+    color: ${templates.layout.style.Flat.Body.text};
+}
+
+input, textarea {
+    -webkit-user-select: auto;
+    outline: 0;
+}
+
+/*** HTML elements ***/
+a {
+    text-decoration: none;
+    font-weight: bold;
+    color: ${templates.layout.style.Flat.Link.text};
+}
+
+img {
+    border: none;
+}
+
+input, textarea {
+    font-size: 15px;
+    border-radius: 6px;
+    padding: 8px 12px;
+    display: block;
+    border: 2px solid ${templates.layout.style.Flat.Input.border.normal};
+    color: ${templates.layout.style.Flat.Input.text};
+}
+
+input:focus, textarea:focus {
+    border-color: ${templates.layout.style.Flat.Input.border.focus};
+}
+
+input::-ms-clear {
+    width: 0;
+    height: 0;
+}
+
+select {
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    text-indent: 0.01px;
+    text-overflow: "";
+    appearance:none;
+    width: 100%;
+    margin: 0px;
+    outline: 0;
+    border-radius: 6px;
+    padding: 6px 12px;
+    border: 2px solid ${templates.layout.style.Flat.Select.border.normal};
+    color: ${templates.layout.style.Flat.Select.text};
+}
+select:focus {
+    border-color: ${templates.layout.style.Flat.Select.border.focus};
+}
+label.select {
+    position:relative;
+}
+label.select:after {
+    background-attachment: scroll;
+    background-clip: border-box;
+    background-color: transparent;
+    background-origin: padding-box;
+    background-position: center center;
+    background-repeat: no-repeat;
+    content: "";
+    height: 100%;
+    position: absolute;
+    right: 8px;
+    top: 2px;
+    width: 22px;
+    pointer-events:none;
+}
+
+h1 {
+    font-size: 2em;
+}
+
+/*** Extra animations for the page engine ***/
+.xfadefast.xout,.xfadefast.xoutMix,.xfadefast.xout3d {
+    opacity: 0;
+    -webkit-animation-duration: 10ms;
+    -webkit-animation-name: fadeout;
+    -moz-animation-duration: 10ms;
+    -moz-animation-name: fadeout;
+    -ms-animation-duration: 10ms;
+    -ms-animation-name: fadeout;
+    -o-animation-duration: 10ms;
+    -o-animation-name: fadeout;
+    animation-duration: 10ms;
+    animation-name: fadeout;
+}
+
+.xfadefast.xin,.xfadefast.xinMix,.xfadefast.xin3d {
+    opacity: 1;
+    -webkit-animation-duration: 10ms;
+    -webkit-animation-name: fadein;
+    -moz-animation-duration: 10ms;
+    -moz-animation-name: fadein;
+    -ms-animation-duration: 10ms;
+    -ms-animation-name: fadein;
+    -o-animation-duration: 10ms;
+    -o-animation-name: fadein;
+    animation-duration: 10ms;
+    animation-name: fadein;
+}
+
+.xinvisible.xout,.xinvisible.xoutMix,.xinvisible.xout3d {
+    opacity: 0.99;
+    -webkit-animation-duration: 10ms;
+    -webkit-animation-name: invisibleout;
+    -moz-animation-duration: 10ms;
+    -moz-animation-name: invisibleout;
+    -ms-animation-duration: 10ms;
+    -ms-animation-name: invisibleout;
+    -o-animation-duration: 10ms;
+    -o-animation-name: invisibleout;
+    animation-duration: 10ms;
+    animation-name: invisibleout;
+}
+
+.xinvisible.xin,.xinvisible.xinMix,.xinvisible.xin3d {
+    opacity: 1;
+    -webkit-animation-duration: 10ms;
+    -webkit-animation-name: invisiblein;
+    -moz-animation-duration: 10ms;
+    -moz-animation-name: invisiblein;
+    -ms-animation-duration: 10ms;
+    -ms-animation-name: invisiblein;
+    -o-animation-duration: 10ms;
+    -o-animation-name: invisiblein;
+    animation-duration: 10ms;
+    animation-name: invisiblein;
+}
+
+@-webkit-keyframes invisiblein {
+    from { -webkit-opacity: 0.99; }
+    to { -webkit-opacity: 1; }
+}
+@-moz-keyframes invisiblein {
+    from { -moz-opacity: 0.99; }
+    to { -moz-opacity: 1; }
+}
+@-o-keyframes invisiblein {
+    from { -o-opacity: 0.99; }
+    to { -o-opacity: 1; }
+}
+@keyframes invisiblein {
+    from { opacity: 0.99; }
+    to { opacity: 1; }
+}
+
+@-webkit-keyframes invisibleout {
+    from { -webkit-opacity: 1; }
+    to { -webkit-opacity: 0.99; }
+}
+@-moz-keyframes invisibleout {
+    from { -moz-opacity: 1; }
+    to { -moz-opacity: 0.99; }
+}
+@-o-keyframes invisibleout {
+    from { -o-opacity: 1; }
+    to { -o-opacity: 0.99; }
+}
+@keyframes invisibleout {
+    from { opacity: 1; }
+    to { opacity: 0.99; }
+}
+
+{/macro}
+
+{/CSSTemplate}

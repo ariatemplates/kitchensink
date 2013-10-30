@@ -1,0 +1,71 @@
+{CSSTemplate {
+  $classpath : "templates.pages.WelcomePageStyle"
+}}
+
+{macro main ()}
+.forkme {
+    position: absolute;
+    top: 0;
+    right:0;
+}
+
+.forkme > img {
+    border: 0;
+}
+.menuhint {
+    float:left;
+    margin-left: 10px;
+    text-align: left;
+}
+.menuhint > div {
+    vertical-align: middle;
+    background-image: url(img/ArrowLeftDouble_64.png);
+    width: 64px;
+    height: 64px;
+    display: inline-block;
+}
+.menuhint > span {
+    width: 200px;
+    display: block;
+    vertical-align: middle;
+}
+.welcome {
+    position: absolute;
+    top: 50%;
+    margin-top: -100px;
+    width: 100%;
+    text-align: center;
+}
+.welcome > div {
+    max-width: 400px;
+    display: inline-block;
+}
+.welcome > div > div {
+    max-width: 350px;
+    display: inline-block;
+}
+.smartphoneversion {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+.smartphoneversion > div {
+    display: inline-block;
+    text-align: right;
+}
+.smartphoneversion > div > div {
+    background-image: url(img/ArrowRightDouble_64.png);
+    width: 64px;
+    height: 64px;
+    display: inline-block;
+}
+.smartphoneversion > div > span {
+    width: 150px;
+    display: block;
+}
+.smartphoneversion > a > img {
+    vertical-align: bottom;
+}
+{/macro}
+
+{/CSSTemplate}

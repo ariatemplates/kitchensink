@@ -1,0 +1,177 @@
+/*
+ * Copyright 2013 Amadeus s.a.s.
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+{CSSTemplate {
+    $classpath: "templates.pages.ui.uiiscroll.MatrixStyle"
+}}
+
+{macro main()}
+.corner {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0px;
+    height: 20px;
+    width: 20px;
+    background-color: ${templates.layout.style.FlatPalette.WetAsphalt};
+    border-radius: 20px 0 0 0;
+}
+
+.hidder_top {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 20px;
+    right: 0;
+    height: 20px;
+    background: transparent;
+    overflow: auto;
+}
+
+.wrapper_top {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 20px;
+    right: 0;
+    height: 20px;
+    overflow: hidden;
+    -ms-touch-action: none;
+    background: ${templates.layout.style.FlatPalette.Clouds};
+}
+
+.cal_matrix_top {
+    height: 20px;
+    width: 700px;
+}
+
+.cal_matrix_topbar {
+    display: block;
+    float: left;
+    height: 20px;
+    width: 100px;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-weight: bold;
+    line-height: 1em;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    border: 1px solid ${templates.layout.style.FlatPalette.WetAsphalt_Light};
+    background-color: ${templates.layout.style.FlatPalette.WetAsphalt};
+    color: ${templates.layout.style.FlatPalette.White};
+}
+
+.hidder_left {
+    position: absolute;
+    z-index: 2;
+    top: 20px;
+    bottom: 0;
+    left: 0px;
+    width: 20px;
+    background: transparent;
+    overflow: auto;
+}
+
+.wrapper_left {
+    position: absolute;
+    z-index: 1;
+    top: 20px;
+    bottom: 0;
+    left: 0px;
+    width: 20px;
+    overflow: hidden;
+    min-height: 300px;
+    -ms-touch-action: none;
+    background: ${templates.layout.style.FlatPalette.Clouds};
+}
+
+.cal_matrix_left {
+    height: 700px;
+    width: 20px;
+}
+
+.cal_matrix_leftbar {
+    display: block;
+    height: 100px;
+    width: 100px;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-weight: bold;
+    line-height: 1em;
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    border: 1px solid ${templates.layout.style.FlatPalette.WetAsphalt_Light};
+    background-color: ${templates.layout.style.FlatPalette.WetAsphalt};
+    color: ${templates.layout.style.FlatPalette.White};
+}
+
+.wrapper {
+    position: absolute;
+    z-index: 1;
+    top: 20px;
+    bottom: 0;
+    left: 20px;
+    right: 0px;
+    overflow: hidden;
+    min-height: 300px;
+    -ms-touch-action: none;
+    background: ${templates.layout.style.FlatPalette.Clouds};
+}
+
+.cal_matrix {
+    height: 700px;
+    width: 700px;
+}
+
+.appButton.cal_matrix_cell {
+    display: inline-block;
+    height: 100px;
+    width: 100px;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-weight: bold;
+    line-height: 7em;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    border: 1px solid ${templates.layout.style.FlatPalette.Silver};
+    background-color: ${templates.layout.style.FlatPalette.White};
+    color: ${templates.layout.style.FlatPalette.WetAsphalt};
+    border-radius: 0;
+}
+
+.appButton.cal_matrix_cell.selected {
+    background: ${templates.layout.style.FlatPalette.Emerald};
+}
+
+.appButton.cal_matrix_cell.touchLibButtonPressed {
+    background: ${templates.layout.style.FlatPalette.Clouds};
+}
+{if !aria.utils.Device.isTouch()}
+.appButton.cal_matrix_cell:hover {
+    background: ${templates.layout.style.FlatPalette.Clouds};
+}
+{/if}
+{/macro}
+
+{/CSSTemplate}

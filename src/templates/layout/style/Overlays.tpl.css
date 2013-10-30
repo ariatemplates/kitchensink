@@ -1,0 +1,234 @@
+/*
+ * Copyright 2013 Amadeus s.a.s.
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+/* STYLES COVERED IN THIS FILE:
+ * Modal mask
+ * Dialog
+ *     - Style
+ *     - H1
+ * Menuover
+ *     - Bg
+ *     - Separator
+ *     - Normal button
+ *     - Cancel button
+ * Share
+ *     - SN images
+ * Notification
+ *     - Popup style
+ */ 
+{CSSTemplate {
+    $classpath: "templates.layout.style.Overlays",
+    $prefix : false
+}}
+
+{macro main()}
+div.touchLibPopup {
+    border: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.xModalMask-default {
+    background-color: rgba(0, 0, 0, 0.4);
+    opacity: 1;
+}
+
+/** .dialog is used in Overlays.tpl for popup, alert, confirm and prompt; and in Tooltip.tpl for tooltip, select  and dialog**/
+.dialog {
+    border-radius: 6px;
+    overflow: hidden;
+    opacity: 1;
+    height: 100%;
+    width: 100%;
+    max-width: 200px;
+    background: ${templates.layout.style.Flat.Dialog.bg};
+    color: ${templates.layout.style.Flat.Dialog.text};
+}
+
+.dialog > h1 {
+    margin: 0;
+    font-size: 20px;
+    padding: 5px;
+    text-align: center;
+    background: ${templates.layout.style.Flat.Dialog.h1};
+}
+
+.dialog > div {
+    padding: 5px;
+}
+
+.dialog > .buttonBar {
+    text-align: center;
+}
+
+.dialog .appButton {
+    margin: 0 1px;
+}
+
+.dialog > input {
+    width: 100%;
+}
+
+/** .menuover is used in Overlays.tpl for all 4 border menus; and in Tooltip.tpl for share**/
+div.menuover {
+    height: 100%;
+    background: ${templates.layout.style.Flat.Menu.bg};
+}
+
+div.menuover > .menuSeparator {
+    padding: 4px 0px;
+    text-indent: 5px;
+    text-align: left;
+    color: ${templates.layout.style.Flat.Menu.text.separator};
+    background: ${templates.layout.style.Flat.Menu.bg};
+    border-bottom: 1px solid ${templates.layout.style.Flat.Menu.separator};
+}
+
+div.menuover > .appButton,div.menuover > .appLink {
+    padding: 0.4em 0em;
+    margin: 0;
+    text-indent: 20px;
+    width: 100%;
+    text-align: left;
+    display: inline-block;
+    background: ${templates.layout.style.Flat.Menu.bg};
+    color: ${templates.layout.style.Flat.Menu.text.link};
+    border-top: 1px solid ${templates.layout.style.Flat.Menu.separator};
+    border-radius: 0px;
+}
+
+div.menuover > .appButton.touchLibButtonPressed, div.menuover > .appLink.touchLibButtonPressed {
+    background: ${templates.layout.style.Flat.Menu.pressed};
+}
+{if !aria.utils.Device.isTouch()}
+div.menuover > .appButton:hover, div.menuover > .appLink:hover {
+    background: ${templates.layout.style.Flat.Menu.pressed};
+}
+{/if}
+
+div.menuover > .appButton.cancel,div.menuover > .appLink.cancel {
+    background: ${templates.layout.style.Flat.Dialog.cancel};
+}
+div.menuover > .appButton.cancel.touchLibButtonPressed,div.menuover > .appLink.cancel.touchLibButtonPressed {
+    background: ${templates.layout.style.Flat.Dialog.cancelpressed};
+}
+{if !aria.utils.Device.isTouch()}
+div.menuover > .appButton.cancel:hover, div.menuover > .appLink.cancel:hover {
+    background: ${templates.layout.style.Flat.Dialog.cancelpressed};
+}
+{/if}
+
+/** .selectbox in Tooltip.tpl for select**/
+div.selectbox div.appButton,div.selectbox div.appLink {
+    display: block;
+    padding: 5px 20px;
+    margin: 5px 0;
+    width: 100%;
+}
+
+/** .selectbox and following rules are used in Tooltip.tpl for share**/
+div.contextmenu {
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+div.contextmenu div.appButton,div.contextmenu div.appLink {
+    display: block;
+    width: 100%;
+    padding: 10px 20px;
+}
+
+div.facebook, div.twitter, div.googleplus, div.linkedin {
+    text-indent: 35px;
+    text-align: left;
+}
+
+div.facebook:before {
+    background-attachment: scroll;
+    background-clip: border-box;
+    background-color: transparent;
+    background-image: url(img/sn_facebook.png);
+    background-origin: padding-box;
+    background-position: center center;
+    background-repeat: no-repeat;
+    content: "";
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 2px;
+    width: 32px;
+}
+
+div.twitter:before {
+    background-attachment: scroll;
+    background-clip: border-box;
+    background-color: transparent;
+    background-image: url(img/sn_twitter.png);
+    background-origin: padding-box;
+    background-position: center center;
+    background-repeat: no-repeat;
+    content: "";
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 2px;
+    width: 32px;
+}
+
+div.googleplus:before {
+    background-attachment: scroll;
+    background-clip: border-box;
+    background-color: transparent;
+    background-image: url(img/sn_googleplus.png);
+    background-origin: padding-box;
+    background-position: center center;
+    background-repeat: no-repeat;
+    content: "";
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 2px;
+    width: 32px;
+}
+
+div.linkedin:before {
+    background-attachment: scroll;
+    background-clip: border-box;
+    background-color: transparent;
+    background-image: url(img/sn_linkedin.png);
+    background-origin: padding-box;
+    background-position: center center;
+    background-repeat: no-repeat;
+    content: "";
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 2px;
+    width: 32px;
+}
+
+/** .notification is used in Tooltip.tpl for notify**/
+div.touchLibPopup div.notification {
+    width: 110px;
+    padding: 20px;
+    border-radius: 6px 0 0 6px;
+    text-align: center;
+    font-weight: bolder;
+    background: ${templates.layout.style.Flat.Dialog.notify.bg};
+    color: ${templates.layout.style.Flat.Dialog.notify.text};
+}
+{/macro}
+
+{/CSSTemplate}

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Kitchen Sink</title>
+<META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE">
+<META HTTP-EQUIV="PRAGMA" CONTENT="NO-CACHE">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="description" content="Aria Templates' Kitchen Sink" />
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<link rel="apple-touch-icon" sizes="128x128" href="/img/webapp_icon.png">
+<link rel="shortcut icon" sizes="128x128" href="/img/webapp_icon.png">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<script type="text/javascript">
+    if (document.location.href.indexOf("smartphone=true") != -1) {
+        window.navigator.__defineGetter__('userAgent', function () {
+            return 'Mozilla/5.0 (Linux; android 4.3; nexus 4 build/jwr66y) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/30.0.1599.92 Mobile Safari/537.36';
+        });
+    }
+</script>
+<script type="text/javascript" src="./aria/ariatemplates_for_kitchensink_1.4.11.js"></script>
+<script type="text/javascript" src="./iscroll.js"></script>
+<style>
+body {
+    padding: 0px;
+    margin: 0px;
+}
+
+html,body,.overflowWrap,.overflowWrap>div {
+    overflow-x: hidden;
+    height: 100%;
+    min-height: 100%;
+}
+
+#splashScreenContainer {
+    background: none repeat scroll 0 0 #34495E;
+    height: 100%;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    z-index: 200000;
+    opacity: 1;
+    -webkit-transition: opacity 0.40s linear;
+    -moz-transition: opacity 0.40s linear;
+    -o-transition: opacity 0.40s linear;
+    transition: opacity 0.40s linear;
+}
+
+#splashScreenContainer.invisible {
+    opacity: 0;
+}
+
+#splashScreenContainer img {
+    position: relative;
+    top: 50%;
+    margin-top: -36px;
+}
+</style>
+</head>
+<body>
+    <div id="splashScreenContainer">
+        <img src="img/banner.png" />
+    </div>
+    <div id="appPlaceHolder" class="overflowWrap"></div>
+    <script type="text/javascript">
+        aria.core.AppEnvironment.setEnvironment({
+            defaultWidgetLibs : {
+                "embed" : "aria.embed.EmbedLib",
+                "html" : "aria.html.HtmlLibrary",
+                "touch" : "aria.touch.widgets.TouchWidgetLib"
+            }
+        });
+    
+        Aria.loadTemplate({
+            classpath : "templates.layout.AppLayout",
+            div : "appPlaceHolder",
+            moduleCtrl : {
+                classpath : "templates.controllers.AppCtrl"
+            }
+        });
+    </script>
+</body>
+</html>

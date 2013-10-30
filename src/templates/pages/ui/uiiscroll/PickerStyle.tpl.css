@@ -1,0 +1,139 @@
+/*
+ * Copyright 2013 Amadeus s.a.s.
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+{CSSTemplate {
+    $classpath: "templates.pages.ui.uiiscroll.PickerStyle"
+}}
+
+{macro main()}
+.wheel {
+    position: absolute;
+    z-index: 2;
+    height: 260px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: ${templates.layout.style.FlatPalette.MidnightBlue_Dark};
+}
+
+.wheelheader {
+    width: 100%;
+    height: 40px;
+}
+
+.wheelheader div.appButton {
+    padding: 0;
+    height: 30px;
+    width: 60px;
+    margin: 5px;
+    line-height: 30px;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.wrapper {
+    position: absolute;
+    z-index: 2;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+    top: 50px;
+    background: #313137; /* Old browsers */
+    background: -moz-linear-gradient(top, #313137 0%, #73747d 5%, #92939b 7%, #ababb5 9%, #c5c6ce 12%, #dfe0e4 16%, #f4f5f6 22%, #fbfcfc 35%, #fbfcfc 50%,
+        #b4c1c7 61%, #fbfcfc 61%, #fbfcfc 65%, #f4f5f6 78%, #dfe0e4 84%, #c5c6ce 88%, #ababb5 91%, #92939b 93%, #73747d 95%, #313137 100%);
+    /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #313137), color-stop(5%, #73747d), color-stop(7%, #92939b),
+        color-stop(9%, #ababb5), color-stop(12%, #c5c6ce), color-stop(16%, #dfe0e4), color-stop(22%, #f4f5f6), color-stop(35%, #fbfcfc),
+        color-stop(50%, #fbfcfc), color-stop(61%, #b4c1c7), color-stop(61%, #fbfcfc), color-stop(65%, #fbfcfc), color-stop(78%, #f4f5f6),
+        color-stop(84%, #dfe0e4), color-stop(88%, #c5c6ce), color-stop(91%, #ababb5), color-stop(93%, #92939b), color-stop(95%, #73747d),
+        color-stop(100%, #313137)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #313137 0%, #73747d 5%, #92939b 7%, #ababb5 9%, #c5c6ce 12%, #dfe0e4 16%, #f4f5f6 22%, #fbfcfc 35%, #fbfcfc 50%,
+        #b4c1c7 61%, #fbfcfc 61%, #fbfcfc 65%, #f4f5f6 78%, #dfe0e4 84%, #c5c6ce 88%, #ababb5 91%, #92939b 93%, #73747d 95%, #313137 100%);
+    /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #313137 0%, #73747d 5%, #92939b 7%, #ababb5 9%, #c5c6ce 12%, #dfe0e4 16%, #f4f5f6 22%, #fbfcfc 35%, #fbfcfc 50%, #b4c1c7
+        61%, #fbfcfc 61%, #fbfcfc 65%, #f4f5f6 78%, #dfe0e4 84%, #c5c6ce 88%, #ababb5 91%, #92939b 93%, #73747d 95%, #313137 100%);
+    /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #313137 0%, #73747d 5%, #92939b 7%, #ababb5 9%, #c5c6ce 12%, #dfe0e4 16%, #f4f5f6 22%, #fbfcfc 35%, #fbfcfc 50%,
+        #b4c1c7 61%, #fbfcfc 61%, #fbfcfc 65%, #f4f5f6 78%, #dfe0e4 84%, #c5c6ce 88%, #ababb5 91%, #92939b 93%, #73747d 95%, #313137 100%);
+    /* IE10+ */
+    background: linear-gradient(to bottom, #313137 0%, #73747d 5%, #92939b 7%, #ababb5 9%, #c5c6ce 12%, #dfe0e4 16%, #f4f5f6 22%, #fbfcfc 35%, #fbfcfc 50%,
+        #b4c1c7 61%, #fbfcfc 61%, #fbfcfc 65%, #f4f5f6 78%, #dfe0e4 84%, #c5c6ce 88%, #ababb5 91%, #92939b 93%, #73747d 95%, #313137 100%);
+    /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient(  startColorstr='#313137', endColorstr='#313137', GradientType=0); /* IE6-9 */
+    overflow: hidden;
+    border-radius: 10px;
+    -ms-touch-action: none;
+}
+
+.mask {
+    position: absolute;
+    top: 80px;
+    background: #edeef2; /* Old browsers */
+    background: -moz-linear-gradient(top, #edeef2 0%, #edeef2 0%, #c8cadd 25%, #bbbfd4 49%, #9fa8c6 51%, #a2a9c7 81%, #a6abc9 82%, #a7adca 100%, #a7adca 100%);
+    /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #edeef2), color-stop(0%, #edeef2), color-stop(25%, #c8cadd),
+        color-stop(49%, #bbbfd4), color-stop(51%, #9fa8c6), color-stop(81%, #a2a9c7), color-stop(82%, #a6abc9), color-stop(100%, #a7adca),
+        color-stop(100%, #a7adca)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #edeef2 0%, #edeef2 0%, #c8cadd 25%, #bbbfd4 49%, #9fa8c6 51%, #a2a9c7 81%, #a6abc9 82%, #a7adca 100%, #a7adca 100%
+        ); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #edeef2 0%, #edeef2 0%, #c8cadd 25%, #bbbfd4 49%, #9fa8c6 51%, #a2a9c7 81%, #a6abc9 82%, #a7adca 100%, #a7adca 100%);
+    /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #edeef2 0%, #edeef2 0%, #c8cadd 25%, #bbbfd4 49%, #9fa8c6 51%, #a2a9c7 81%, #a6abc9 82%, #a7adca 100%, #a7adca 100%);
+    /* IE10+ */
+    background: linear-gradient(to bottom, #edeef2 0%, #edeef2 0%, #c8cadd 25%, #bbbfd4 49%, #9fa8c6 51%, #a2a9c7 81%, #a6abc9 82%, #a7adca 100%, #a7adca 100%);
+    /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient(  startColorstr='#edeef2', endColorstr='#a7adca', GradientType=0); /* IE6-9 */
+    border: solid 1px #7b8497;
+    width: 100%;
+    height: 42px;
+    z-index: 1;
+}
+
+.scroller {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    padding: 0;
+    z-index: 2;
+}
+
+.scroller ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    text-align: left;
+}
+
+.scroller li {
+    margin: 0;
+    padding: 0 10px;
+    height: 40px;
+    line-height: 40px;
+    background-color: transparent;
+    font-size: 14px;
+    text-align: left;
+    border: 0;
+    color: ${templates.layout.style.FlatPalette.WetAsphalt};
+}
+{/macro}
+
+{/CSSTemplate}
