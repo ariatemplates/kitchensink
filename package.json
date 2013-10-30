@@ -1,0 +1,43 @@
+{
+    "author" : "ariatemplates <contact@ariatemplates.com> (http://github.com/ariatemplates)",
+    "name" : "ATKitchenSink",
+    "description" : "The Aria Templates Kitchen Sink.",
+    "version" : "1.0.0",
+    "homepage" : "http://ariatemplates.com",
+    "repository" : {
+        "type" : "git",
+        "url" : "git://github.com/ariatemplates/kitchensink.git"
+    },
+    "config" : {
+        "blackberry10" : {
+            "ip" : "169.254.0.1",
+            "password" : "mypassword",
+            "pin" : "ABCD1234"
+        }
+    },
+    "scripts" : {
+        "clean" : "node build/build.js clean",
+        "lint" : "node build/build.js checkStyle",
+        "build" : "npm run-script lint && node build/build.js",
+        "startServerDev" : "node build/serverDev.js",
+        "startServerProd" : "npm run-script build && node build/serverProd.js",
+        "android" : "node build/build.js apps --android",
+        "blackberry10" : "npm run-script lint && node build/build.js apps --blackberry10",
+        "ios" : "npm run-script lint && node build/build.js apps --ios",
+        "wp8" : "npm run-script lint && node build/build.js apps --wp8"
+    },
+    "devDependencies" : {
+        "gzip-js" : "0.3.2",
+        "grunt-verifylowercase" : "0.2.0",
+        "grunt-leading-indent" : "0.1.0",
+        "grunt" : "git+https://github.com/divdavem/grunt.git#13da751bdfd291c25a47ca7669ae0778eb289b28",
+        "grunt-contrib-jshint" : "0.6.3",
+        "attester" : "1.2.1",
+        "express" : "3.3.5",
+        "atpackager" : "0.1.0",
+        "ariatemplates" : "1.4.11",
+        "shelljs" : "0.1.2",
+        "cordova" : "~3.1.0",
+        "iscroll" : "git+https://github.com/mlaval/iscroll.git#56438e24e36ad1fe6e507bec53c1c24836fa60e9"
+    }
+}

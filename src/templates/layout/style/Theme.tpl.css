@@ -1,0 +1,225 @@
+/*
+ * Copyright 2013 Amadeus s.a.s.
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+ 
+/* STYLES COVERED IN THIS FILE:
+ * Layout:
+ *     - Header bg
+ *     - Separator
+ *     - Menu bg
+ *     - Page bg
+ * Header:
+ *     - Images
+ *     - Button
+ *     - Arrow
+ *     - Button pressed
+ * Menu:
+ *     - Separator
+ *     - Button
+ *     - Button Pressed
+ * Tick images
+ * Text border
+ * Widgets:
+ *     - Sliders
+ *     - Switch
+ */
+ 
+{CSSTemplate {
+    $classpath: "templates.layout.style.Theme"
+}}
+
+{macro main()}
+
+/*** Styling from AppLayout ***/
+.header {
+    background: ${templates.layout.style.Flat.Header.bg};
+    border-bottom: 2px solid ${templates.layout.style.Flat.Header.border};
+}
+
+.panelseparator {
+    background: ${templates.layout.style.Flat.PanelSeparator.bg};
+}
+
+.page.side, .pagedetails {
+    background: ${templates.layout.style.Flat.Body.bg};
+}
+
+/** Header images **/
+.header > h1 {
+    background-image: url(img/banner.png);
+    background-size: 162px 48px;
+}
+
+.header>.appButton.back:after {
+    background-image: url(img/arrow-back.png);
+    position: absolute;
+    left: -4px;
+    background-size: 80%;
+}
+
+.header>.appButton.menu:after {
+    background-image: url(img/icon_list.png);
+    background-size: 60% 60%;
+}
+
+.header>.appButton.home:after {
+    background-image: url(img/icon_home.png);
+    background-size: 60% 60%;
+}
+
+/*** Header buttons ***/
+.header>.appButton {
+    background: ${templates.layout.style.Flat.Button.header.bg};
+    border: none;
+}
+
+.header>.appButton.back:before {
+    background: ${templates.layout.style.Flat.Button.header.bg};
+}
+
+.header>.appButton.touchLibButtonPressed,.header>.appButton.back.touchLibButtonPressed:before {
+    background: ${templates.layout.style.Flat.Button.header.pressed};
+}
+{if !aria.utils.Device.isTouch()}
+.header>.appButton:hover,.header>.appButton.back:hover:before {
+    background: ${templates.layout.style.Flat.Button.header.pressed};
+}
+{/if}
+
+/*** Menu style ***/
+.innermenu {
+    border-right: 2px solid ${templates.layout.style.Flat.Menu.border};
+}
+.innermenu, .menuContent > .menuSeparator, .menuContent > .appButton {
+    background: ${templates.layout.style.Flat.Menu.bg};
+}
+
+.menuContent > .menuSeparator {
+    color: ${templates.layout.style.Flat.Menu.text.separator};
+    border-bottom: 1px solid ${templates.layout.style.Flat.Menu.separator};
+}
+
+.menuContent > .appButton {
+    color: ${templates.layout.style.Flat.Menu.text.link};
+    border-top: 1px solid ${templates.layout.style.Flat.Menu.separator};
+    border-radius: 0px;
+}
+
+.menuContent > .appButton.touchLibButtonPressed {
+    background: ${templates.layout.style.Flat.Menu.pressed};
+}
+{if !aria.utils.Device.isTouch()}
+.menuContent > .appButton:hover {
+    background: ${templates.layout.style.Flat.Menu.pressed};
+}
+{/if}
+
+.menuContent > .appButton.navigation.forward:after {
+    background-image: url(img/nav_arrowright_grey.png);
+}
+
+/*** Ticks ***/
+div.tickok {
+    height: 20px;
+    width: 20px;
+    background-image: url(img/tick_ok.png);
+    background-size: 20px 20px;
+}
+
+div.tickok.not {
+    background-image: url(img/tick_ko.png);
+}
+
+/*** Button bar ***/
+.buttonBar {
+    background-color: ${templates.layout.style.Flat.ButtonBar.bg};
+}
+
+/*** Text border ***/
+.textBorder {
+    border-color: ${templates.layout.style.Flat.TextBorder.border};
+}
+
+/*** Sliders ***/
+div.touchLibSlider,div.touchLibDoubleSlider {
+    border: none;
+    background: ${templates.layout.style.Flat.Slider.bg};
+}
+
+div.touchLibSlider span.touchContainer,div.touchLibDoubleSlider span.touchContainer {
+    margin: -9px 0 0 0;
+    height: 32px;
+    z-index: 2;
+}
+
+div.touchLibSlider span.sliderButton,div.touchLibDoubleSlider span.firstPoint,div.touchLibDoubleSlider span.secondPoint {
+    border-radius: 32px 32px 32px 32px;
+    border: none;
+    width: 32px;
+    height: 32px;
+    background: ${templates.layout.style.Flat.Slider.thumb};
+}
+
+div.touchLibSlider span.sliderHighLight , div.touchLibDoubleSlider span.sliderHighLight {
+    height: 17px;
+    margin: 9px 0 0;
+    background: ${templates.layout.style.Flat.Slider.highlight};
+}
+
+/*** Switch ***/
+div.touchLibSlider.switch {
+    height: 30px;
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+}
+
+div.touchLibSlider.switch span.touchContainer {
+    margin: 0;
+}
+
+div.touchLibSlider.switch span.sliderButton {
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+    border-radius: 30px;
+    width: 30px;
+    height: 30px;
+}
+
+div.touchLibSlider.switch div.touchLibSwitchOn,div.touchLibSlider.switch div.touchLibSwitchOff {
+    height: 30px;
+    line-height: 30px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+div.touchLibSlider.switch div.touchLibSwitchOn {
+    text-align: right;
+    text-indent: 45px;
+    direction: rtl;
+    color: ${templates.layout.style.Flat.Slider.text.on};
+    background: ${templates.layout.style.Flat.Slider.highlight};
+}
+
+div.touchLibSlider.switch div.touchLibSwitchOff {
+    text-align: left;
+    text-indent: 40px;
+    color: ${templates.layout.style.Flat.Slider.text.off};
+    background: ${templates.layout.style.Flat.Slider.bg};
+}
+
+{/macro}
+
+{/CSSTemplate}

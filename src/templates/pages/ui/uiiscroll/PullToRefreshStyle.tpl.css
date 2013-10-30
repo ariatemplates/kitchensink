@@ -1,0 +1,147 @@
+/*
+ * Copyright 2013 Amadeus s.a.s.
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+{CSSTemplate {
+    $classpath: "templates.pages.ui.uiiscroll.PullToRefreshStyle"
+}}
+
+{macro main()}
+	.wrapper {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: ${templates.layout.style.FlatPalette.Clouds};
+    overflow: hidden;
+    -ms-touch-action: none;
+}
+
+.scroller {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    padding: 0;
+}
+
+.scroller ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    text-align: left;
+}
+
+.scroller li {
+    padding: 0 10px;
+    height: 40px;
+    line-height: 40px;
+    border-bottom: 1px solid ${templates.layout.style.FlatPalette.Silver};
+    background-color: ${templates.layout.style.FlatPalette.White};
+    font-size: 14px;
+}
+
+/**
+ * Pull down styles
+ */
+.pullDown,.pullUp {
+    background: ${templates.layout.style.FlatPalette.White};
+    height: 40px;
+    line-height: 40px;
+    border-bottom: 1px solid ${templates.layout.style.FlatPalette.Silver};
+    font-weight: bold;
+    font-size: 14px;
+    color: ${templates.layout.style.FlatPalette.PeterRiver};
+}
+
+.pullDown .pullDownIcon,.pullUp .pullUpIcon {
+    display: block;
+    float: left;
+    width: 40px;
+    height: 40px;
+    background: url(img/pull-icon@2x.png) 0 0 no-repeat;
+    -webkit-background-size: 40px 80px;
+    -moz-background-size: 40px 80px;
+    background-size: 40px 80px;
+    -webkit-transition-property: -webkit-transform;
+    -moz-transition-property: -moz-transform;
+    transition-property: transform;
+    -webkit-transition-duration: 250ms;
+    -moz-transition-duration: 250ms;
+    transition-duration: 250ms;
+}
+
+.pullDown .pullDownIcon {
+    -webkit-transform: rotate(0deg) translateZ(0);
+    -moz-transform: rotate(0deg) translateZ(0);
+    transform: rotate(0deg) translateZ(0);
+}
+
+.pullUp .pullUpIcon {
+    -webkit-transform: rotate(-180deg) translateZ(0);
+    -moz-transform: rotate(-180deg) translateZ(0);
+    transform: rotate(-180deg) translateZ(0);
+}
+
+.pullDown.flip .pullDownIcon {
+    -webkit-transform: rotate(-180deg) translateZ(0);
+    -moz-transform: rotate(-180deg) translateZ(0);
+    transform: rotate(-180deg) translateZ(0);
+}
+
+.pullUp.flip .pullUpIcon {
+    -webkit-transform: rotate(0deg) translateZ(0);
+    -moz-transform: rotate(0deg) translateZ(0);
+    transform: rotate(0deg) translateZ(0);
+}
+
+.pullDown.loading .pullDownIcon,.pullUp.loading .pullUpIcon {
+    background-position: 0 100%;
+    -webkit-transform: rotate(0deg) translateZ(0);
+    -moz-transform: rotate(0deg) translateZ(0);
+    transform: rotate(0deg) translateZ(0);
+    -webkit-transition-duration: 0ms;
+    -moz-transition-duration: 0ms;
+    transition-duration: 0ms;
+    -webkit-animation-name: loading;
+    -moz-animation-name: loading;
+    animation-name: loading;
+    -webkit-animation-duration: 2s;
+    -moz-transition-duration: 2s;
+    transition-duration: 2s;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    -moz-animation-timing-function: linear;
+    animation-timing-function: linear;
+}
+
+@-webkit-keyframes loading {
+    from { -webkit-transform:rotate(0deg) translateZ(0); }
+    to { -webkit-transform:rotate(360deg) translateZ(0); }
+}
+@-moz-keyframes loading {
+    from { -moz-transform:rotate(0deg) translateZ(0); }
+    to { -moz-transform:rotate(360deg) translateZ(0); }
+}
+@keyframes loading {
+    from { transform:rotate(0deg) translateZ(0); }
+    to { transform:rotate(360deg) translateZ(0); }
+}	
+{/macro}
+
+{/CSSTemplate}

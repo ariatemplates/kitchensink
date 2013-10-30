@@ -1,0 +1,74 @@
+/*
+ * Copyright 2013 Amadeus s.a.s.
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+{CSSTemplate {
+  $classpath : "templates.pages.transition.TransitionsStyle"
+}}
+
+{macro main ()}
+
+h1, span {
+    display:block;
+    border-radius: 6px;
+    padding: 10px;
+    color: ${templates.layout.style.FlatPalette.White};
+}
+
+h1.slideleft {
+    background: ${templates.layout.style.FlatPalette.Orange};
+}
+span.slideleft {
+    background: ${templates.layout.style.FlatPalette.SunFlower};
+}
+h1.slideright {
+    background: ${templates.layout.style.FlatPalette.Emerald};
+}
+span.slideright {
+    background: ${templates.layout.style.FlatPalette.Nephritis};
+}
+h1.slideup {
+    background: ${templates.layout.style.FlatPalette.Wisteria};
+}
+span.slideup {
+    background: ${templates.layout.style.FlatPalette.Amethyst};
+}
+h1.slidedown {
+    background: ${templates.layout.style.FlatPalette.Pumpkin};
+}
+span.slidedown {
+    background: ${templates.layout.style.FlatPalette.Carrot};
+}
+h1.fade {
+    background: ${templates.layout.style.FlatPalette.MidnightBlue};
+}
+span.fade {
+    background: ${templates.layout.style.FlatPalette.WetAsphalt};
+}
+h1.flip {
+    background: ${templates.layout.style.FlatPalette.Pomegranate};
+}
+span.flip {
+    background: ${templates.layout.style.FlatPalette.Alizarin};
+}
+h1.pop {
+    background: ${templates.layout.style.FlatPalette.Asbestos};
+}
+span.pop {
+    background: ${templates.layout.style.FlatPalette.Concrete};
+}
+
+{/macro}
+
+{/CSSTemplate}

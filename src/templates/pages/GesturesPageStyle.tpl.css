@@ -1,0 +1,49 @@
+{CSSTemplate {
+  $classpath : "templates.pages.GesturesPageStyle"
+}}
+
+{macro main ()}
+
+.touchboard {
+    {if aria.utils.Device.isMobile()}
+        width: 100%;
+        height: 150px;
+    {else/}
+        width: 320px;
+        float: right;
+        height: 320px;
+        margin-left: 10px;
+    {/if}
+    border: 2px dotted ${templates.layout.style.FlatPalette.PeterRiver_Dark};
+    background-color: ${templates.layout.style.FlatPalette.PeterRiver_Light};
+    -ms-touch-action: none;
+}
+
+.touchMe {
+    color: ${templates.layout.style.FlatPalette.PeterRiver_Dark};
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.console {
+    min-height: 150px;
+    width: 100%;
+}
+
+.console > span {
+    text-align: left;
+    display: block;
+    font-size: 12px;
+    margin-left: 5px;
+}
+
+.clear {
+    float: right;
+    width: auto;
+    margin-right: 5px;
+}
+
+{/macro}
+
+{/CSSTemplate}

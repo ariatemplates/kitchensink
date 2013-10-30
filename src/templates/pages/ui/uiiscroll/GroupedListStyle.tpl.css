@@ -1,0 +1,113 @@
+/*
+ * Copyright 2013 Amadeus s.a.s.
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+{CSSTemplate {
+    $classpath: "templates.pages.ui.uiiscroll.GroupedListStyle"
+}}
+
+{macro main()}
+.wrapper {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    -ms-touch-action: none;
+}
+
+.scroller {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    padding: 0;
+    text-align: left;
+}
+
+.scroller div,.separator,div.appButton {
+    text-align: left;
+    padding-left: 5px;
+}
+
+.separator {
+    height: 20px;
+    padding-top: 2px;
+    font-weight: bold;
+    opacity: 0.8;
+    color: ${templates.layout.style.FlatPalette.White};
+    background: ${templates.layout.style.FlatPalette.WetAsphalt};
+}
+
+.sticky {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    display: none;
+}
+
+.isvisible {
+    display: block;
+}
+
+div.appButton {
+    height: 40px;
+    padding-top: 12px;
+    display: block;
+    width: 100%;
+    border-radius: 0;
+    border: 0;
+    border-top: 1px solid ${templates.layout.style.FlatPalette.Silver};
+    background: ${templates.layout.style.FlatPalette.White};
+    color: ${templates.layout.style.FlatPalette.WetAsphalt};
+}
+
+div.appButton.touchLibButtonPressed {
+    background: ${templates.layout.style.FlatPalette.Clouds};
+}
+{if !aria.utils.Device.isTouch()}
+div.appButton:hover {
+    background: ${templates.layout.style.FlatPalette.Clouds};
+}
+{/if}
+
+div.appButton.selected {
+    background: ${templates.layout.style.FlatPalette.Emerald};
+}
+
+.rightBar {
+    position: absolute;
+    top: 2px;
+    right: 10px;
+    width: 20px;
+    padding: 10px 0;
+    border-radius: 10px;
+    z-index: 3;
+    opacity: 0.8;
+    background: ${templates.layout.style.FlatPalette.PeterRiver};
+}
+
+.rightBar div {
+    text-align: center;
+    width: 100%;
+    font-size: 11px;
+    font-weight: bold;
+    color: ${templates.layout.style.FlatPalette.White};
+}
+{/macro}
+
+{/CSSTemplate}

@@ -1,0 +1,157 @@
+[
+    {
+        "name": "aria/at_components.js",
+        "files": [
+            "aria/DomEvent.js",
+            "aria/utils/**/*",
+            "!aria/utils/Beans.js",
+            "!aria/utils/Bridge.js",
+            "!aria/utils/css/AnimationsBean.js",
+            "!aria/utils/Data.js",
+            "!aria/utils/Date.js",
+            "!aria/utils/Ellipsis.js",
+            "!aria/utils/environment/Date.js",
+            "!aria/utils/environment/DateCfgBeans.js",
+            "!aria/utils/environment/Number.js",
+            "!aria/utils/environment/NumberCfgBeans.js",
+            "!aria/utils/filters/DisplayXmlResponse.js",
+            "!aria/utils/FireDomEvent.js",
+            "!aria/utils/FrameATLoader.js",
+            "!aria/utils/FrameATLoaderHTML.html",
+            "!aria/utils/FunctionWriter.js",
+            "!aria/utils/History.js",
+            "!aria/utils/InheritanceNormalization.js",
+            "!aria/utils/json/ISerializer.js",
+            "!aria/utils/json/JsonSerializerBeans.js",
+            "!aria/utils/Mouse.js",
+            "!aria/utils/Number.js",
+            "!aria/utils/overlay/CloneOverlay.js",
+            "!aria/utils/Profiling.js",
+            "!aria/utils/ProfilingDisplay.tpl",
+            "!aria/utils/ProfilingDisplayScript.js",
+            "!aria/utils/Rand.js",
+            "!aria/utils/resize/Resize.js",
+            "!aria/utils/ScriptLoader.js",
+            "!aria/utils/StackHashMap.js",
+            "!aria/utils/String.js",
+            "!aria/utils/StringCallback.js",
+            "!aria/utils/SynEvents.js",
+            "!aria/utils/UtilsRes.js",
+            "!aria/utils/validators/Alpha.js",
+            "!aria/utils/validators/AlphaInternational.js",
+            "!aria/utils/validators/AlphaNum.js",
+            "!aria/utils/validators/CfgBeans.js",
+            "!aria/utils/validators/Email.js",
+            "!aria/utils/validators/IValidator.js",
+            "!aria/utils/validators/Mandatory.js",
+            "!aria/utils/validators/MinMaxLength.js",
+            "!aria/utils/validators/MultipleValidator.js",
+            "!aria/utils/validators/Number.js",
+            "!aria/utils/validators/Object.js",
+            "!aria/utils/validators/Phone.js",
+            "!aria/utils/validators/RegExp.js",
+            "!aria/utils/validators/String.js",
+            "!aria/utils/validators/Validator.js",
+            "!aria/utils/VisualFocus.js",
+            "!aria/utils/Xml.js"
+        ]
+    },
+    {
+        "name": "aria/at_components.js",
+        "files": [
+            "aria/modules/**/*",
+            "!aria/modules/requestHandler/IRequestHandler.js",
+            "!aria/modules/requestHandler/JSONRequestHandler.js",
+            "!aria/modules/requestHandler/RequestHandler.js",
+            "!aria/modules/requestHandler/XMLRequestHandler.js",
+            "!aria/modules/urlService/IUrlService.js",
+            "!aria/modules/urlService/PatternURLCreationImpl.js"
+        ]
+    },
+    {
+        "name": "aria/at_components.js",
+        "files": [
+            "aria/core/environment/Customizations.js",
+            "aria/core/environment/CustomizationsCfgBeans.js",
+            "aria/templates/*",
+            "!aria/templates/ClassGenerator.js",
+            "!aria/templates/ClassWriter.js",
+            "!aria/templates/CmlClassGenerator.js",
+            "!aria/templates/CSSClassGenerator.js",
+            "!aria/templates/CSSParser.js",
+            "!aria/templates/FlowCtrl.js",
+            "!aria/templates/IFlowCtrl.js",
+            "!aria/templates/LegacyGeneralStyle.tpl.css",
+            "!aria/templates/Parser.js",
+            "!aria/templates/Repeater.js",
+            "!aria/templates/Statements.js",
+            "!aria/templates/TextTemplate.js",
+            "!aria/templates/TmlClassGenerator.js",
+            "!aria/templates/TplClassGenerator.js",
+            "!aria/templates/TplParser.js",
+            "!aria/templates/TreeBeans.js",
+            "!aria/templates/TxtClassGenerator.js",
+            "!aria/templates/TxtCtxt.js",
+            "!aria/templates/TxtParser.js",
+            "!aria/templates/View.js",
+            "!aria/templates/ViewCfgBeans.js",
+            "aria/widgetLibs/*",
+            "aria/tools/contextual/environment/ContextualMenu.js",
+            "aria/tools/contextual/environment/ContextualMenuCfgBeans.js"
+        ]
+    },
+    {
+        "name": "aria/at_components.js",
+        "files": [
+            "aria/html/**/*",
+            "!aria/html/beans/AutoCompleteCfg.js",
+            "!aria/html/beans/CheckBoxCfg.js",
+            "!aria/html/CheckBox.js"
+        ]
+    },
+    {
+        "name": "aria/at_components.js",
+        "files": [
+            "aria/embed/*",
+            "!aria/embed/Map.js",
+            "!aria/embed/Element.js",
+            "!aria/embed/IEmbedController.js"
+        ]
+    },
+    {
+        "name": "aria/at_components.js",
+        "files": [
+            "aria/pageEngine/**/*",
+            "!aria/pageEngine/contentProcessors/MarkdownProcessor.js",
+            "!aria/pageEngine/pageProviders/BasePageProviderBeans.js",
+            "!aria/pageEngine/utils/HistoryManager.js"
+        ]
+    },
+    {
+        "name": "aria/at_components.js",
+        "files": [
+            "aria/storage/*",
+            "!aria/storage/Beans.js",
+            "!aria/storage/SessionStorage.js"
+        ]
+    },
+    {
+        "name": "aria/at_components.js",
+        "files": [
+            "aria/touch/**/*",
+            "!aria/touch/widgets/*"
+        ]
+    },
+    {
+        "name": "aria/at_kitchensink.js",
+        "files": [
+            "templates/**/*"
+        ]
+    },
+    {
+        "name": "aria/at_kitchensink.js",
+        "files": [
+            "pageengine/**/*.js"
+        ]
+    }
+]

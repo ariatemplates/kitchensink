@@ -1,0 +1,97 @@
+/*
+ * Copyright 2013 Amadeus s.a.s.
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+{CSSTemplate {
+    $classpath: "templates.pages.ui.uicomponents.TooltipStyle"
+}}
+
+{macro main()}
+div.appButton.opener {
+    display: inline-block;
+    border-radius: 6px;
+    text-align: left;
+    width: auto;
+    margin: auto;
+}
+
+div div.appButton {
+    display: block;
+    width: 100%;
+    border-radius: 6px 6px 0 0;
+    margin: 0;
+    text-align: left;
+}
+
+div div.appButton:after {
+    background-attachment: scroll;
+    background-clip: border-box;
+    background-color: transparent;
+    background-origin: padding-box;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 80%;
+    content: "";
+    height: 100%;
+    position: absolute;
+    right: 8px;
+    top: 0;
+    width: 20px;
+}
+
+div div.appButton.collapsed {
+    border-radius: 6px;
+}
+
+div.selector {
+    border-radius: 6px;
+    margin: 10px;
+    text-align: left;
+    height: 48px;
+    padding: 2px;
+    padding-left: 10px;
+    line-height: 42px;
+    border: 2px solid ${templates.layout.style.FlatPalette.Silver};
+}
+
+div.selector div.appButton {
+    display: inline;
+    width: auto;
+    padding-right: 50px;
+    float: right;
+    height: 40px;
+    line-height: 15px;
+}
+
+div.share {
+    padding-right: 40px;
+}
+div.share.appButton:after {
+    background-attachment: scroll;
+    background-clip: border-box;
+    background-color: transparent;
+    background-image: url(img/sn_share.png);
+    background-origin: padding-box;
+    background-position: center center;
+    background-repeat: no-repeat;
+    content: "";
+    height: 100%;
+    position: absolute;
+    top: -2px;
+    right: 2px;
+    width: 32px;
+}
+{/macro}
+
+{/CSSTemplate}
