@@ -37,7 +37,7 @@
         "atpackager" : "0.1.0",
         "ariatemplates" : "1.4.11",
         "shelljs" : "0.1.2",
-        "cordova" : "~3.1.0",
+        "cordova" : "3.1.0-0.1.0",
         "iscroll" : "git+https://github.com/mlaval/iscroll.git#56438e24e36ad1fe6e507bec53c1c24836fa60e9"
     }
 }
