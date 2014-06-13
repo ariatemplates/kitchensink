@@ -252,7 +252,7 @@ Aria.classDefinition({
             pageRequest = pageRequest || {};
             var pageId = this._getPageId(pageRequest);
             pageRequest.pageId = pageId;
-            this._updateUrlMap(pageRequest);
+            this.__updateUrlMap(pageRequest);
             if (this.customconfig && this.customconfig.pageDefinitionTemplate && this.customconfig.pages
                     && this.customconfig.pages[pageId]) {
                 this._postProcess(callback, this._loadPageDefinitionFromResource(pageId));
@@ -314,7 +314,7 @@ Aria.classDefinition({
          * @return {String} the pageId
          */
         _getPageId : function (pageRequest) {
-            var map = this._urlMap.urlToPageId, pageId = pageRequest.pageId, url = pageRequest.url;
+            var map = this.__urlMap.urlToPageId, pageId = pageRequest.pageId, url = pageRequest.url;
             if (pageId) {
                 return pageId;
             }
@@ -326,7 +326,7 @@ Aria.classDefinition({
                     }
                 }
             }
-            return this._config.homePageId;
+            return this.__config.homePageId;
         },
 
         /**

@@ -21,7 +21,7 @@
         "build" : "npm run-script lint && node build/build.js",
         "startServerDev" : "node build/serverDev.js",
         "startServerProd" : "npm run-script build && node build/serverProd.js",
-        "android" : "node build/build.js apps --android",
+        "android" : "npm run-script lint && node build/build.js apps --android",
         "blackberry10" : "npm run-script lint && node build/build.js apps --blackberry10",
         "ios" : "npm run-script lint && node build/build.js apps --ios",
         "wp8" : "npm run-script lint && node build/build.js apps --wp8"
@@ -35,7 +35,7 @@
         "attester" : "1.2.1",
         "express" : "3.3.5",
         "atpackager" : "0.1.0",
-        "ariatemplates" : "1.4.11",
+        "ariatemplates" : "1.4.17",
         "shelljs" : "0.1.2",
         "cordova" : "3.1.0-0.1.0",
         "iscroll" : "git+https://github.com/mlaval/iscroll.git#56438e24e36ad1fe6e507bec53c1c24836fa60e9"

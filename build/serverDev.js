@@ -29,7 +29,7 @@ app.get("/", function (req, res) {
 
 app.all(/^(.*)$/, function (req, res, next) {
     var targetFile = req.params[0];
-    if (targetFile.indexOf("/aria/ariatemplates_for_kitchensink_1.4.11.js") === 0) {
+    if (targetFile.indexOf("/aria/ariatemplates_for_kitchensink_1.4.17.js") === 0) {
         res.sendfile(path.normalize(__dirname + "/../node_modules/ariatemplates/src/aria/bootstrap.js"));
     }
     else if (targetFile.indexOf("/aria/") === 0) {

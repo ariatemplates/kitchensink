@@ -46,7 +46,7 @@ On top of that, here are a few more recommendations.
 
 ### Android
 
-Starts the adb daemon first, for example by typing `adb device` in the terminal.
+Starts the adb daemon first, for example by typing `adb devices` in the terminal.
 
 ### Blackberry 10
 

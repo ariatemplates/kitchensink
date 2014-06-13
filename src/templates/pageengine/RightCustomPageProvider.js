@@ -63,7 +63,7 @@ Aria.classDefinition({
          * @return {String} the pageId
          */
         _getPageId : function (pageRequest) {
-            var map = this._urlMap.urlToPageId, pageId = pageRequest.pageId, url = pageRequest.url;
+            var map = this.__urlMap.urlToPageId, pageId = pageRequest.pageId, url = pageRequest.url;
             if (pageId) {
                 return pageId;
             }
@@ -83,7 +83,7 @@ Aria.classDefinition({
                     }
                 }
             }
-            return this._config.homePageId;
+            return this.__config.homePageId;
         }
     }
 });
